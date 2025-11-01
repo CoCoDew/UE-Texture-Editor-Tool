@@ -104,8 +104,8 @@ class MainWindow(QMainWindow):
     # Changes currently selected layer in the UI               
     def change_layer(self, item):
         # Adjusts opacity value to layer-related opacity value
-        if self.opacity_value != self.layer_opacities[self.selected_layer_index]:
-            self.layer_opacities[self.selected_layer_index] = self.opacity_value
+        # if self.opacity_value != self.layer_opacities[self.selected_layer_index]:
+        self.layer_opacities[self.selected_layer_index] = self.opacity_value
         self.apply_full_resolution_adjustments()
         # If the layer has not changed but instead has been refreshed, it will not reset never_rotated
         if str(self.selected_layer_index) not in item.text():
